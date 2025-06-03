@@ -1,0 +1,50 @@
+testset_to_share
+|
+| app.py(WEBアプリケーション実行ファイル)
+| civil_materials_sample.csv(商品DB)
+| civil_materials_summary.csv(商品情報ブック)
+| faiss_store(商品ベクトルデータ)
+|      | index.faiss
+|      | index.pkl
+|      
+| readme
+| requirements.txt
+
+
+
+1.  pip install -r requirements.txt
+必要なパッケージをインストールする。ここで競合関係エラーが発生する場合（特にsentence-transformers）、
+ローカルのpython,pipのバージョンが重複してないかをチェック（python3.11とpython3.13が混在していたりするときは一つに統一する。pipも同様）
+
+2.  ollama pull gemma（使うモデル名を入れる）
+Ollamaをインストールしていることが前提。
+インストールはこちらから  https://ollama.com
+
+3.  ollama run gemma（使うモデル名を入れる）
+
+4.  streamlit run app.py --server.port 8502（指定したローカルのポート）
+ローカルサーバーのポートを指定してstreamlitを起動
+
+
+
+
+
+起動コマンド
+streamlit run app.py --server.port 8502
+
+Ollamaコマンド
+
+    初期インストールコマンド
+    ollama pull gemma（使うモデル名を入れる）
+
+    モデル一覧コマンド
+    ollama list
+
+    モデル起動コマンド
+    ollama run gemma（使うモデル名を入れる）
+
+    モデル停止コマンド
+    ollama stop gemma（使うモデル名を入れる）
+
+    モデル削除コマンド
+    ollama rm gemma（使うモデル名を入れる）
