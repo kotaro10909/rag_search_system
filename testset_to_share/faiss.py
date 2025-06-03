@@ -2,6 +2,8 @@ from langchain.schema import Document
 from docx import Document as DocxDocument
 import glob
 from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.text_splitter import CharacterTextSplitter
+from langchain_community.vectorstores import FAISS
 
 text_splitter = CharacterTextSplitter(
     separator='\n\n',  
