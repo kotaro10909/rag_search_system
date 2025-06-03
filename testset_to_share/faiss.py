@@ -4,7 +4,7 @@ import glob
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-
+import csv
 text_splitter = CharacterTextSplitter(
     separator='\n\n',  
     chunk_size=500,  
